@@ -30,6 +30,7 @@ namespace ConsoleApp2
                 Page ocrPage = engine.Process(Pix.LoadFromFile(filePath + "CaptchImage.png"), PageSegMode.AutoOnly);
                 var captchatext = ocrPage.GetText().Trim();
                 Console.WriteLine(captchatext.Replace("\n", "\r\n"));
+
                 
             }
 
